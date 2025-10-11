@@ -28,7 +28,7 @@ Run all the commands in your terminal as a single block:
 
 ```bash
 # Clone the repository
-git clone <your-repo-url>
+git clone https://github.com/Vipo89/CSS_HTML_ADVANCED
 
 # Navigate to the project folder
 cd every-detail-matter
