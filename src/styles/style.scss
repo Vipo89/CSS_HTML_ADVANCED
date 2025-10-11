@@ -10,23 +10,25 @@ body {
 .hero {
   display: grid;
   grid-template-rows: auto auto;
-  background-color: white;
-  margin: 0 10px 10px;
+  background-color: vars.$standardcolor;
+  margin: 0 .625rem .625rem;
 }
 
 .hero_top {
   h1 {
     color: vars.$basecolor;
     font-family: vars.$fancyfont;
+    font-size: clamp(2rem,4vw,4rem);
   }
   h2{
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 500;
+    font-size: clamp(1rem,3vw,2rem);
   }
   font-family: vars.$basefont;
   text-align: center;
   padding: 1rem;
-  border-top: 15px solid #3c4353;
+  border-top: .9375rem solid #3c4353;
 }
 
 .hero_bottom {
@@ -42,13 +44,22 @@ body {
 }
 
 .heropic1 {
+  &:hover{
+    border: 3px solid vars.$highlightcolor;
+  }
   @include mixins.GridColumnRow("1/3", 1);
 }
 .heropic2 {
+    &:hover{
+    border: 3px solid vars.$highlightcolor;
+  }
   @include mixins.GridColumnRow(1, 2);
   @include mixins.blankborder();
 }
 .heropic3 {
+    &:hover{
+    border: 3px solid vars.$highlightcolor;
+  }
   @include mixins.GridColumnRow(2, 2);
   @include mixins.blankborder();
 }
@@ -56,13 +67,13 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 0 10px 10px;
+  margin: 0 .625rem .625rem;
   height: auto;
   background-color: vars.$productsectioncolor;
-  border-top: 2px solid white;;
-  border-bottom:2px solid white;
+  border-top: 2px solid vars.$standardcolor;
+  border-bottom:2px solid vars.$standardcolor;
   h1,h2,p{
-color: white;
+color: vars.$standardcolor;
   }
 }
 .product_name{
@@ -71,7 +82,17 @@ color: white;
 .price{
   font-family: vars.$fancyfont;
 }
-
+.pic{
+   &:hover {
+    border: 4px solid vars.$highlightcolor;
+  }
+}
+.productphoto img {
+  &:hover {
+    cursor: pointer;
+    border: 4px solid vars.$highlightcolor;
+  }
+}
 .products_grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -82,7 +103,7 @@ color: white;
   grid-template-rows: 1fr;
   gap: .5rem;                 
   padding: 1rem;                  
-  border: 1px solid white;
+  border: 1px solid vars.$standardcolor;
 }
 
 .productphoto img {
@@ -96,7 +117,7 @@ color: white;
 }
 
 .endbutton{
-  padding: 20px;
+  padding: 1.25rem;
 }
 .buyallbtn {
   all: unset;
@@ -113,7 +134,6 @@ color: white;
 }
 
 
-
 @media (min-width: 769px) {
   .hero_top{
      border-top: 15px solid transparent;
@@ -124,21 +144,40 @@ color: white;
   grid-template-rows: 1fr 1fr;
 }
 .heropic1 {
-  @include mixins.GridColumnRow("1 / 4", "1 / 3"); // columnas 1-3, filas 1-2
+  @include mixins.GridColumnRow("1/4","1/3");
 }
 
 .heropic2 {
-  @include mixins.GridColumnRow("4 / 5", "1 / 2"); // columna 4, fila 1
+  @include mixins.GridColumnRow("4/5","1/2");
   @include mixins.blankborder();
 }
 
 .heropic3 {
-  @include mixins.GridColumnRow("4 / 5", "2 / 3"); // columna 4, fila 2
+  @include mixins.GridColumnRow("4/5","2/3"); 
   @include mixins.blankborder();
 }
+.products_grid {
+  display: grid;
+  grid-template-columns:repeat(4,1fr);
+  grid-template-rows: auto;
 }
-  
-@media (min-width: 1025px) {
+}
+
+@media (min-width: 1440px) {
+
+  .hero_top p {
+    margin: 0 20rem;
+    font-size: 1.5vw;
+  }
+  body{
+      background-color: vars.$standardcolor;
+  }
+  .hero {
+    margin: 0px 3.75rem 3.75rem;
+  }
+  .bottom{
+    margin: 0px 3.75rem 3.75rem;
+  }
    .hero_top{
      border-top: 15px solid transparent;
   } 
