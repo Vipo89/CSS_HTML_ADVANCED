@@ -35,6 +35,7 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
+  overflow: hidden;
 }
 
 .hero_bottom img {
@@ -180,5 +181,8 @@ body {
   }
   .hero_top {
     border-top: 15px solid transparent;
+  }
+  .hero_bottom{
+    grid-template-rows: 400px 400px;
   }
 }
