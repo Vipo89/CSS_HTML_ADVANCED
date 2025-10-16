@@ -4,7 +4,7 @@
 
 ---
 
-## 🌟 Features
+##  Features
 - Fully **responsive layout** for mobile, tablet, and desktop.
 - **CSS Grid & Flexbox** for structured hero and product sections.
 - **Interactive elements**: hover effects on buttons and images.
@@ -22,7 +22,7 @@
 
 ---
 
-## 🚀 Installation & Usage
+##  Installation & Usage
 
 Run all the commands in your terminal as a single block:
 
@@ -42,7 +42,7 @@ npm run dev
 # Open your browser at the local server URL (usually http://localhost:5173)
 
 
-📂 Project Structure
+ Project Structure
 
 CSS_HTML_ADVANCED/
 │
@@ -57,7 +57,7 @@ CSS_HTML_ADVANCED/
 └─ README.md
 
 
-💡 Notes
+ Notes
 
 This is purely a practice project, focusing on responsive design.
 
